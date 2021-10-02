@@ -1,0 +1,323 @@
+/* Variables */
+:root {
+  --primary-color: #68f8f0;
+  --secondary-color: #000000;
+  --dark-color: #180818;
+  --white-color: #ffffff;
+  --primary-gradient-color: linear-gradient(
+    to right bottom,
+    #68f8f0,
+    #64f8f0,
+    #61f9f0,
+    #5df9f0,
+    #59f9f0,
+    #5ef9f1,
+    #62faf1,
+    #66faf2,
+    #72fbf3,
+    #7cfcf5,
+    #86fdf6,
+    #8ffef7
+  );
+  --secondary-gradient-color: linear-gradient(
+    to right bottom,
+    #000000,
+    #060606,
+    #0c0c0c,
+    #111111,
+    #151515,
+    #181818,
+    #1b1b1b,
+    #1e1e1e,
+    #212121,
+    #232323,
+    #262626,
+    #292929
+  );
+  --content-width: 112rem;
+}
+
+/* General Styles */
+* {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: var(--secondary-color);
+}
+
+/* Body grid template */
+.body-index {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+.header {
+  grid-area: header;
+}
+
+.main {
+  grid-area: main;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+/* Animations */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.h1 {
+  font-size: 8rem;
+  font-weight: 800;
+}
+
+.h2 {
+  font-size: 3.8rem;
+  font-weight: 700;
+}
+
+.h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.h5 {
+  font-weight: 400;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+}
+
+.h6 {
+  font-weight: 600;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+
+.h5,
+button {
+  color: var(--primary-color);
+}
+
+.content-width {
+  max-width: var(--content-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button {
+  border: 2px solid var(--primary-color);
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 2.7rem 3rem;
+  text-transform: uppercase;
+  border-radius: 0%;
+}
+
+.button:hover {
+  background: var(--primary-gradient-color);
+  color: var(--secondary-color);
+}
+
+.line-below::after {
+  content: "";
+  position: absolute;
+  background-color: var(--primary-color);
+  margin-top: 2rem;
+  width: 20%;
+  height: 0.2rem;
+  bottom: 0;
+  left: 0;
+}
+
+.active-link {
+  border: 2px solid var(--primary-color);
+}
+
+.logo {
+  font-size: 4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.h1,
+.h2,
+.h3,
+.logo,
+.nav__link,
+.card,
+.table,
+.form,
+.footer {
+  color: var(--white-color);
+}
+
+/* ==========================================================================
+   Header section
+   ========================================================================== */
+.header {
+  margin: 4rem 7.6rem;
+}
+
+/* Navigation section
+   ========================================================================== */
+.nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: flex-start;
+}
+
+.nav__list {
+  display: flex;
+  list-style-type: none;
+  list-style-position: outside;
+}
+
+.nav__link {
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  padding: 1rem 1.4rem;
+}
+
+.nav__link:hover {
+  border-bottom: 2px solid var(--primary-color);
+}
+
+/* ==========================================================================
+   Main section
+   ========================================================================== */
+.main {
+  /* Background image position was being affected by hero padding */
+  background-origin: padding-box;
+  background-image: url(../images/flamingo-large.png);
+  background-repeat: no-repeat;
+  background-position: 50% -420%;
+  background-size: 130%;
+}
+
+/* Hero section
+   ========================================================================== */
+.hero {
+  padding-top: 8.7rem;
+}
+
+.hero__title {
+  width: 80%;
+  margin-top: 3.8rem;
+}
+
+.hero__button {
+  margin-top: 6.5rem;
+}
+
+/* Cards Section
+   ========================================================================== */
+.cards-container {
+  display: grid;
+  column-gap: 1.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  margin-top: 19rem;
+}
+
+.cards-container:hover .card {
+  opacity: 0.3;
+}
+
+.cards-container .card:hover {
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.09);
+  opacity: 1;
+}
+
+.card {
+  padding: 5rem 4rem;
+  animation: gradient 6s ease infinite;
+  background: var(--secondary-gradient-color);
+  background-size: 400% 400%;
+  /* Hover border was affecting other elements position */
+  border: 2px solid transparent;
+}
+
+.card:hover {
+  border: 2px solid var(--primary-color);
+}
+
+.card__title {
+  padding-bottom: 2rem;
+  margin-top: 5.5rem;
+  position: relative;
+}
+
+.card__description {
+  line-height: 2;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-top: 2rem;
+  width: 80%;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.footer {
+  margin-top: 15rem;
+  margin-bottom: 5rem;
+  display: grid;
+  grid-template-columns: 35% 1fr;
+  width: 100%;
+}
+
+.footer__slogan {
+  margin-top: 2rem;
+  padding-bottom: 3.5rem;
+  position: relative;
+}
+
+.footer__lists {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: end;
+}
+
+.footer__list {
+  display: grid;
+  row-gap: 2rem;
+}
+
+.footer__item:first-child {
+  margin-top: 3rem;
+}
+
+.footer__item {
+  display: flex;
+  font-size: 1.5rem;
+}
