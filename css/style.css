@@ -215,7 +215,7 @@ button {
    Main section
    ========================================================================== */
 .main {
-  /* Background image position was being affected by hero padding */
+  /* Background image position was affected by hero padding */
   background-origin: padding-box;
   background-image: url(../images/flamingo-large.png);
   background-repeat: no-repeat;
@@ -263,7 +263,7 @@ button {
   animation: gradient 6s ease infinite;
   background: var(--secondary-gradient-color);
   background-size: 400% 400%;
-  /* Hover border was affecting other elements position */
+  /* Hover border affected other elements position */
   border: 2px solid transparent;
 }
 
