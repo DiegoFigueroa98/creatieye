@@ -7,6 +7,7 @@
     <meta name="author" content="Diego Figueroa" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/reset.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,91 +19,127 @@
   </head>
   <body class="body-about">
     <!-- Header Component -->
-    <header class="header">
+    <header class="header mx-5 px-5">
       <!-- Navigation Menu -->
-      <nav class="nav">
+      <nav class="navbar navbar-expand-lg">
         <!-- Logo -->
-        <p class="nav__logo logo">Creatieye</p>
+        <p class="nav__logo logo lead">Creatieye</p>
+        <button class="navbar-toggler collapsed navbar-dark bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
         <!-- Link List -->
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a href="index.html" class="nav__link" id="home">Home</a>
-          </li>
-          <li class="nav__item">
-            <a href="services.html" class="nav__link" id="services">Services</a>
-          </li>
-          <li class="nav__item">
-            <a href="works.html" class="nav__link" id="works">Works</a>
-          </li>
-          <li class="nav__item">
-            <a href="about.html" class="nav__link" id="about">About</a>
-          </li>
-          <li class="nav__item">
-            <a href="blog.html" class="nav__link" id="blog">Blog</a>
-          </li>
-          <li class="nav__item">
-            <a href="contact.html" class="nav__link" id="contact">Contact</a>
-          </li>
-        </ul>
+        <div class="navbar-collapse collapse ms-auto" id="navbarColor01">
+          <ul class="nav__list navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav__item nav-item me-lg-4">
+              <a href="index.html" class="nav__link nav-link" id="home">Home</a>
+            </li>
+            <li class="nav__item nav-item me-lg-4">
+              <a href="services.html" class="nav__link nav-link" id="services">Services</a>
+            </li>
+            <li class="nav__item nav-item me-lg-4">
+              <a href="works.html" class="nav__link nav-link" id="works">Works</a>
+            </li>
+            <li class="nav__item nav-item me-lg-4">
+              <a href="about.html" class="nav__link nav-link" id="about">About</a>
+            </li>
+            <li class="nav__item nav-item me-lg-4">
+              <a href="blog.html" class="nav__link nav-link" id="blog">Blog</a>
+            </li>
+            <li class="nav__item nav-item me-lg-4">
+              <a href="contact.html" class="nav__link nav-link" id="contact">Contact</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
     <!-- Main content -->
-    <main>
-      <h1 class="h1">About</h1>
-      <h5 class="h5">We are more than digital agency</h5>
+    <main class="content-width container justify-content-center">
+      <h1 class="h1 mx-5 mx-lg-0">About</h1>
+      <h5 class="h5 mx-5 mx-lg-0 mb-5">We are more than digital agency</h5>
+      <!-- Carousel -->
+      <section id="demo" class="carousel slide mb-5" data-bs-ride="carousel">
+
+        <!-- Indicators/dots -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        </div>
+        
+        <!-- The slideshow/carousel -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80" alt="Los Angeles" class="d-block" style="width:100%">
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1172&q=80" alt="Chicago" class="d-block" style="width:100%">
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1475669698648-2f144fcaaeb1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80" alt="New York" class="d-block" style="width:100%">
+          </div>
+        </div>
+        
+        <!-- Left and right controls/icons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </section>
       <!-- Cards -->
-      <section class="cards-container">
+      <section class="cards-container row d-flex justify-content-center justify-content-lg-start lg-d-inline">
         <!-- Card 1 -->
-        <article class="card">
+        <article class="card col-10 col-lg-3 mb-5">
           <h3 class="card__title">Team Work</h3>
-          <p class="card__description">Commited and creative</p>
+          <p class="card__description lead">Commited and creative</p>
         </article>
         <!-- Card 2 -->
-        <article class="card">
+        <article class="card col-10 col-lg-3 mb-5">
           <h3 class="card__title">Philosofy</h3>
-          <p class="card__description">Trust play off</p>
+          <p class="card__description lead">Trust play off</p>
         </article>
         <!-- Card 3 -->
-        <article class="card">
+        <article class="card col-10 col-lg-3 mb-5">
           <h3 class="card__title">Office</h3>
-          <p class="card__description">Somewhere on earth</p>
+          <p class="card__description lead">Somewhere on earth</p>
         </article>
       </section>
     </main>
     <!-- Footer -->
-    <footer class="footer content-width">
+    <footer class="footer content-width d-flex flex-column d-lg-block container mx-5 mx-lg-auto">
       <!-- Company Info -->
       <section class="company-info">
-        <p class="footer__logo logo">Creatieye</p>
+        <p class="footer__logo logo lead">Creatieye</p>
         <h5 class="footer__slogan h5 bottom-line">
           We are more than a digital agency
         </h5>
       </section>
       <!-- Contact list -->
-      <section class="footer__lists">
-        <section class="contact-section">
+      <section class="footer__lists row d-flex">
+        <section class="contact-section col-6 col-lg-4">
           <h6 class="footer__subtitle h6">Contact us</h6>
           <ul class="footer__list">
             <li class="footer__item">
               <img src="" alt="" class="footer__icon" />
-              <p class="footer__link">(+52) 3121231933</p>
+              <p class="footer__link lead">(+52) 3121231933</p>
             </li>
             <li class="footer__item">
               <img src="" alt="" class="footer__icon" />
-              <p class="footer__link">name@gmail.com</p>
+              <p class="footer__link lead">name@gmail.com</p>
             </li>
             <li class="footer__item">
               <img src="" alt="" class="footer__icon" />
-              <p class="footer__link">CDMX, Mexico</p>
+              <p class="footer__link lead">CDMX, Mexico</p>
             </li>
             <li class="footer__item">
               <img src="" alt="" class="footer__icon" />
-              <p class="footer__link">Sunday to Friday</p>
+              <p class="footer__link lead">Sunday to Friday</p>
             </li>
           </ul>
         </section>
         <!-- Services list -->
-        <section class="services-section">
+        <section class="services-section col-6 col-lg-4">
           <h6 class="footer__subtitle h6">Our services</h6>
           <ul class="footer__list">
             <li class="footer__item">Single Project</li>
@@ -112,7 +149,7 @@
           </ul>
         </section>
         <!-- About list -->
-        <section class="about-section">
+        <section class="about-section col-6 col-lg-4">
           <h6 class="footer__subtitle h6">About us</h6>
           <ul class="footer__list">
             <li class="footer__item">About</li>
@@ -124,5 +161,6 @@
       </section>
     </footer>
     <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </body>
 </html>
