@@ -91,8 +91,10 @@ body {
 }
 
 .h2 {
-  font-size: 3.8rem;
+  font-size: 5rem;
   font-weight: 700;
+  /* For left line */
+  position: relative;
 }
 
 .h3 {
@@ -137,11 +139,20 @@ button {
   color: var(--secondary-color);
 }
 
-.line-below::after {
+.left-line::before {
   content: "";
   position: absolute;
   background-color: var(--primary-color);
-  margin-top: 2rem;
+  width: 6rem;
+  height: 3px;
+  top: 50%;
+  left: 0;
+}
+
+.bottom-line::after {
+  content: "";
+  position: absolute;
+  background-color: var(--primary-color);
   width: 20%;
   height: 0.2rem;
   bottom: 0;
@@ -214,8 +225,8 @@ button {
 /* ==========================================================================
    Main section
    ========================================================================== */
-.main {
-  /* Background image position was affected by hero padding */
+.main--home {
+  /* Background image position was being affected by hero padding */
   background-origin: padding-box;
   background-image: url(../images/flamingo-large.png);
   background-repeat: no-repeat;
@@ -229,13 +240,24 @@ button {
   padding-top: 8.7rem;
 }
 
-.hero__title {
+/* Home Modifier */
+
+.hero__title--home {
   width: 80%;
   margin-top: 3.8rem;
 }
 
-.hero__button {
+.hero__button--home {
   margin-top: 6.5rem;
+}
+
+/* Services Modifier */
+.hero__title--services.left-line {
+  padding-left: 8rem;
+}
+
+.hero__slogan--services {
+  margin-top: 2rem;
 }
 
 /* Cards Section
@@ -245,7 +267,6 @@ button {
   column-gap: 1.5rem;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
-  margin-top: 19rem;
 }
 
 .cards-container:hover .card {
@@ -260,15 +281,10 @@ button {
 
 .card {
   padding: 5rem 4rem;
-  animation: gradient 6s ease infinite;
+  animation: gradient 6s ease-in-out infinite;
   background: var(--secondary-gradient-color);
   background-size: 400% 400%;
-  /* Hover border affected other elements position */
-  border: 2px solid transparent;
-}
-
-.card:hover {
-  border: 2px solid var(--primary-color);
+  /* Hover border was affecting other elements position */
 }
 
 .card__title {
@@ -283,6 +299,42 @@ button {
   font-weight: 400;
   margin-top: 2rem;
   width: 80%;
+}
+
+/* Home modifier */
+.cards-container--home {
+  margin-top: 19rem;
+}
+
+.card--home {
+  border: 2px solid transparent;
+}
+
+.card--home:hover {
+  border: 2px solid var(--primary-color);
+}
+
+/* Services modifier */
+.cards-container--services {
+  margin-top: 10rem;
+  row-gap: 1.5rem;
+}
+
+.card--services {
+  border-bottom: solid 5px var(--white-color);
+}
+
+.cards-container .card--services:hover {
+  background: var(--primary-gradient-color);
+  color: var(--secondary-color);
+}
+
+.cards-container .card--services:hover .card__title.h3 {
+  color: var(--secondary-color);
+}
+
+.cards-container .card--services:hover .card__icon {
+  filter: grayscale(1) invert(1);
 }
 
 /* ==========================================================================
