@@ -54,10 +54,7 @@ body {
 /* Body grid template */
 .body-index {
   display: grid;
-  grid-template-areas:
-    "header"
-    "main"
-    "footer";
+  grid-template-areas: "header" "main" "footer";
 }
 
 .header {
@@ -84,7 +81,6 @@ body {
     background-position: 0% 50%;
   }
 }
-
 .h1 {
   font-size: 8rem;
   font-weight: 800;
@@ -100,6 +96,11 @@ body {
 .h3 {
   font-size: 2.5rem;
   font-weight: 700;
+}
+
+.h4 {
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 .h5 {
@@ -203,13 +204,11 @@ button {
   align-items: center;
   align-content: flex-start;
 }
-
 .nav__list {
   display: flex;
   list-style-type: none;
   list-style-position: outside;
 }
-
 .nav__link {
   font-weight: 600;
   text-decoration: none;
@@ -217,7 +216,6 @@ button {
   font-size: 1.5rem;
   padding: 1rem 1.4rem;
 }
-
 .nav__link:hover {
   border-bottom: 2px solid var(--primary-color);
 }
@@ -238,25 +236,27 @@ button {
    ========================================================================== */
 .hero {
   padding-top: 8.7rem;
+  /* Home Modifier */
+  /* Services Modifier */
+  /* Works Modifier */
 }
-
-/* Home Modifier */
-
 .hero__title--home {
   width: 80%;
   margin-top: 3.8rem;
 }
-
 .hero__button--home {
   margin-top: 6.5rem;
 }
-
-/* Services Modifier */
 .hero__title--services.left-line {
   padding-left: 8rem;
 }
-
 .hero__slogan--services {
+  margin-top: 2rem;
+}
+.hero__title--works.left-line {
+  padding-left: 8rem;
+}
+.hero__slogan--works {
   margin-top: 2rem;
 }
 
@@ -286,13 +286,11 @@ button {
   background-size: 400% 400%;
   /* Hover border was affecting other elements position */
 }
-
 .card__title {
   padding-bottom: 2rem;
   margin-top: 5.5rem;
   position: relative;
 }
-
 .card__description {
   line-height: 2;
   font-size: 1.5rem;
@@ -338,6 +336,42 @@ button {
 }
 
 /* ==========================================================================
+   Table
+   ========================================================================== */
+.table {
+  margin-top: 3rem;
+  width: 100%;
+}
+.table__header {
+  text-align: start;
+}
+.table__image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.table__cell {
+  font-size: 1.6rem;
+  padding-top: 2rem;
+  line-height: 1.7;
+}
+.table__cell:nth-child(1) {
+  width: 15%;
+}
+.table__cell:nth-child(2) {
+  width: 15%;
+  color: var(--primary-color);
+  font-weight: 500;
+}
+.table__cell:nth-child(3) {
+  width: 50%;
+}
+.table__cell:nth-child(4) {
+  width: 20%;
+}
+
+/* ==========================================================================
    Footer
    ========================================================================== */
 .footer {
@@ -347,29 +381,26 @@ button {
   grid-template-columns: 35% 1fr;
   width: 100%;
 }
-
 .footer__slogan {
   margin-top: 2rem;
   padding-bottom: 3.5rem;
   position: relative;
 }
-
 .footer__lists {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-items: end;
 }
-
 .footer__list {
   display: grid;
   row-gap: 2rem;
 }
-
 .footer__item:first-child {
   margin-top: 3rem;
 }
-
 .footer__item {
   display: flex;
   font-size: 1.5rem;
 }
+
+/*# sourceMappingURL=style.css.map */
