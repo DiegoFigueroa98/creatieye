@@ -1,0 +1,21 @@
+{
+  "name": "creatieye",
+  "version": "1.0.0",
+  "description": "Final project CoderHouse",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "sass --watch scss/style.scss css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DiegoFigueroa98/creatieye.git"
+  },
+  "author": "Diego Figueroa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DiegoFigueroa98/creatieye/issues"
+  },
+  "homepage": "https://github.com/DiegoFigueroa98/creatieye#readme",
+  "dependencies": {}
+}
