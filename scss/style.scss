@@ -242,7 +242,7 @@
   /* Hero section
      ========================================================================== */
   .hero {
-    padding-top: 8.7rem;
+    padding-top: 3.7rem;
 
     /* Home Modifier */
     &__title--home {
@@ -271,6 +271,20 @@
     &__slogan--works {
       margin-top: 2rem;
     }
+
+    /* Blog Modifier */
+    &__title--blog.left-line {
+      padding-left: 8rem;
+    }
+
+    &__slogan--blog {
+      margin-top: 2rem;
+    }
+  }
+
+  /* Home Modifier */
+  .hero--home {
+    padding-top: 8.7rem;
   }
   
   
@@ -330,7 +344,7 @@
   
   /* Services modifier */
   .cards-container--services {
-    margin-top: 10rem;
+    margin-top: 6rem;
     row-gap: 1.5rem;
   }
   
@@ -439,6 +453,8 @@
       line-height: 1.7;
     }
 
+    
+
     &__cell:nth-child(1) {
       width: 15%;
     }
@@ -458,7 +474,119 @@
     }
   }
 
+  /* ==========================================================================
+     Slider
+     ========================================================================== */
 
+  .slider {
+    position: relative;
+    width: 100%;
+    height: 30vw;
+    margin: 6rem auto;
+    perspective: 1400px;
+    transform-style: preserve-3d;
+
+    &__control[type=radio] {
+      position: relative;
+      top: 108%;
+      left: 50%;
+      width: 1.8rem;
+      height: 1.8rem;
+      margin: 0 1.5rem 0 0;
+      opacity: 0.4;
+      transform: translateX(-83px);
+      cursor: pointer;
+    }
+
+    &__control[type=radio]:nth-child(5) {
+      margin-right: 0;
+    }
+
+    &__control[type=radio]:checked {
+      opacity: 1;
+    }
+
+    &__text {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      cursor: pointer;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      transition: transform 400ms ease;
+      text-shadow: 0px 0px 2.0rem var(--dark-color);
+      font-size: 3rem;
+      padding-bottom: 3rem;
+    }
+
+    /* Slide styles */
+    &__text:nth-of-type(n) {
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    /* Virtual Reality */
+    &__text:nth-of-type(1) {
+      background-image: url(../images/virtual-reality.jpg);
+    }
+
+    /* Future Cities */
+    &__text:nth-of-type(2) {
+      background-image: url(../images/future-city.jpg);
+    }
+
+    /* Gift Ideas */
+    &__text:nth-of-type(3) {
+      background-image: url(../images/gift-ideas.jpg);
+    }
+
+    /* 3D Printer */
+    &__text:nth-of-type(4) {
+      background-image: url(../images/3d-printer.jpg);
+    }
+
+    /* Dron Pictures */
+    &__text:nth-of-type(5) {
+      background-image: url(../images/dron-pictures.jpg);
+    }
+  }
+  
+  /* Slider Features */
+  
+  /* Active Slide */
+  #s1:checked ~ #slide1, #s2:checked ~ #slide2, #s3:checked ~ #slide3, #s4:checked ~ #slide4, #s5:checked ~ #slide5 {
+    box-shadow: 0 13px 26px rgba(0,0,0, 0.3), 0 12px 6px rgba(0,0,0, 0.2);
+    transform: translate3d(0%, 0, 0px);
+  }
+  
+  /* Next Slide */
+  #s1:checked ~ #slide2, #s2:checked ~ #slide3, #s3:checked ~ #slide4, #s4:checked ~ #slide5, #s5:checked ~ #slide1 {
+    box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
+    transform: translate3d(15%, 0, -100px);
+  }
+  
+  
+  /* Next to Next Slide */
+  #s1:checked ~ #slide3, #s2:checked ~ #slide4, #s3:checked ~ #slide5, #s4:checked ~ #slide1, #s5:checked ~ #slide2 {
+    box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
+    transform: translate3d(30%, 0, -250px);
+  }
+  
+  /* Previous to Previous Slide */
+  #s1:checked ~ #slide4, #s2:checked ~ #slide5, #s3:checked ~ #slide1, #s4:checked ~ #slide2, #s5:checked ~ #slide3 {
+    box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
+    transform: translate3d(-30%, 0, -250px);
+  }
+  
+  /* Previous Slide */
+  #s1:checked ~ #slide5, #s2:checked ~ #slide1, #s3:checked ~ #slide2, #s4:checked ~ #slide3, #s5:checked ~ #slide4 {
+    box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
+    transform: translate3d(-15%, 0, -100px);
+  }
+  
   
   /* ==========================================================================
      Footer

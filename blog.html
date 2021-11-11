@@ -46,32 +46,25 @@
     </nav>
   </header>
   <!-- Main content -->
-  <main>
-    <h2 class="h2">Lastest News</h1>
-    <h5 class="h5">Check out some of our news</h5>
-    <!-- Cards -->
-    <section class="cards-container">
-      <!-- Card 1 -->
-      <article class="card">
-        <img class="card__image" src="" alt="Future Concept" srcset="">
-        <p class="card__title">VR Sketching Tool</p>
-        <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus.</p>
-        <button class="card__button">Read More</button>
-      </article>
-      <!-- Card 2 -->
-      <article class="card">
-        <img class="card__image" src="" alt="Big Ideas" srcset="">
-        <p class="card__title">8 Cities that show how the future will look like</p>
-        <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus.</p>
-        <button class="card__button">Read More</button>
-      </article>
-      <!-- Card 3 -->
-      <article class="card">
-        <img class="card__image" src="" alt="Creative Solutions" srcset="">
-        <p class="card__title">15 gift ideas for mom and dad</p>
-        <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus.</p>
-        <button class="card__button">Read More</button>
-      </article>
+  <main class="main main--blog content-width">
+    <!-- Main Hero -->
+    <section class="hero hero--blog">
+      <h1 class="hero__title--blog h2 left-line">Lastest News</h1>
+      <h5 class="hero__slogan--blog h5">Check out some of our news</h5>
+    </section>
+    <!-- Slider -->
+    <section class="slider">
+      <input class="slider__control" type="radio" name="slider" id="s1" checked>
+      <input class="slider__control" type="radio" name="slider" id="s2">
+      <input class="slider__control" type="radio" name="slider" id="s3">
+      <input class="slider__control" type="radio" name="slider" id="s4">
+      <input class="slider__control" type="radio" name="slider" id="s5">
+    
+      <label class="slider__text h3 virtual-reality" for="s1" id="slide1">New VR Drawing tool coming for designers</label>
+      <label class="slider__text h2 future-cities" for="s2" id="slide2">8 Cities that show you what the future will look like</label>
+      <label class="slider__text h2 gift-ideas" for="s3" id="slide3">15 Gift Ideas for mom and dad</label>
+      <label class="slider__text h2 3d-printer" for="s4" id="slide4">Cool things to 3D print for 2021</label>
+      <label class="slider__text h2 dron-pictures" for="s5" id="slide5">2021 Drone photo awards</label>
     </section>
   </main>
   <!-- Footer -->
