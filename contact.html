@@ -46,18 +46,20 @@
     </nav>
   </header>
   <!-- Main content -->
-  <main>
-    <h2 class="h2">Have any project in mind?</h1>
-    <button class="button">Make Inquiry</button>
+  <main class="main main--contact content-width">
+    <section class="hero hero--contact">
+      <h2 class="hero__title--contact h2">Have any project in mind?</h1>
+    </section>
     <!-- Contact Form -->
     <form class="form">
       <!-- Text Input -->
-      <label class="form__label" for="full-name">Full Name</label>
+      <label class="form__label h5" for="full-name">Full Name</label>
       <input class="form__input" type="text" name="full-name" id="full-name" required>
       <!-- Email input -->
-      <label class="form__label" for="email-address">Email Address</label>
+      <label class="form__label h5" for="email-address">Email Address</label>
       <input class="form__input" type="email" name="email-address" id="email-address" required>
       <!-- Combobox -->
+      <label class="form__label h5" for="subject">Subject</label>
       <select class="form__select" name="subject" id="subject" required>
         <option class="form__option" value="" disabled selected hidden>Choose a subject</option>
         <option class="form__option" value="general-information">General information</option>
@@ -66,11 +68,15 @@
         <option class="form__option" value="partnership">Partnership</option>
       </select>
       <!-- Checkbox -->
-      <input class="form__input" type="checkbox" name="newsletter" id="newsletter">
-      <label class="form__label" for="newsletter">Suscribe to the Newsletter</label>
+      <section class="form__group">
+        <input class="form__input" type="checkbox" name="newsletter" id="newsletter">
+        <label class=" h5" for="newsletter">Suscribe to the Newsletter</label>
+      </section>
       <!-- Buttons -->
-			<input class="form__input" type="reset" value="Reset">
-		  <input class="form__input" type="submit" value="Submit">
+      <section class="form__group">
+        <button class="form__button button" type="reset">Reset</button>
+        <button class="form__button button" type="submit">Make inquiry</button>
+      </section>
 		</form>
   </main>
   <!-- Footer -->
