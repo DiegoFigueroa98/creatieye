@@ -294,7 +294,7 @@ button {
    ========================================================================== */
 .cards-container {
   display: grid;
-  column-gap: 1.5rem;
+  gap: 1.5rem;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
 }
@@ -345,7 +345,6 @@ button {
 /* Services modifier */
 .cards-container--services {
   margin-top: 6rem;
-  row-gap: 1.5rem;
 }
 
 .card--services {
@@ -372,6 +371,10 @@ button {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   margin-top: 6rem;
+}
+.cards-container--about .card--about {
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .cards-container--about .card--about:hover {
   transition: all 0.2s ease-in-out;
@@ -442,7 +445,7 @@ button {
 }
 .table__cell {
   font-size: 1.6rem;
-  padding-top: 2rem;
+  padding: 2rem 2rem 0 0;
   line-height: 1.7;
 }
 .table__cell:nth-child(1) {
@@ -465,8 +468,8 @@ button {
    ========================================================================== */
 .slider {
   position: relative;
-  width: 100%;
-  height: 30vw;
+  width: 80%;
+  height: 35vw;
   margin: 6rem auto;
   perspective: 1400px;
   transform-style: preserve-3d;
@@ -566,7 +569,7 @@ button {
 .form {
   display: grid;
   justify-content: center;
-  grid-template-columns: 45%;
+  grid-template-columns: 50%;
   margin-top: 2rem;
 }
 .form__label {
@@ -629,6 +632,17 @@ button {
 }
 
 /* ==========================================================================
+   Scrollbar
+   ========================================================================== */
+body ::-webkit-scrollbar {
+  height: 0.5rem;
+}
+
+body ::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+}
+
+/* ==========================================================================
    Footer
    ========================================================================== */
 .footer {
@@ -658,6 +672,264 @@ button {
 .footer__item {
   display: flex;
   font-size: 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1366px) {
+  :root {
+    --content-width: 80vw;
+  }
+
+  .main--home {
+    background-position: right top;
+    background-attachment: fixed;
+    background-size: 100%;
+  }
+
+  .slider {
+    height: 40vw;
+  }
+}
+@media (max-width: 1200px) {
+  .table__cell:nth-child(3) {
+    width: 45%;
+  }
+  .table__cell:nth-child(4) {
+    width: 25%;
+  }
+
+  .form {
+    grid-template-columns: 55%;
+  }
+
+  .hero--home {
+    padding-top: 5vw;
+  }
+
+  .cards-container--home {
+    margin-top: 11rem;
+  }
+
+  .card__description {
+    width: 100%;
+  }
+}
+@media (max-width: 992px) {
+  .header,
+.footer {
+    display: none;
+  }
+
+  .hero__title--home {
+    width: 100%;
+  }
+
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cards-container--home {
+    margin-top: 8rem;
+  }
+
+  .slider__text {
+    padding: 1.5rem 2rem;
+  }
+
+  .form {
+    grid-template-columns: 65%;
+  }
+
+  .hero__title--contact {
+    text-align: center;
+  }
+
+  .table__image {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .slider {
+    height: 50vw;
+  }
+}
+@media (max-width: 768px) {
+  .h1 {
+    font-size: 6.5rem;
+  }
+
+  .h2 {
+    font-size: 4rem;
+  }
+
+  .h3 {
+    font-size: 2rem;
+  }
+
+  .h4 {
+    font-size: 1.8rem;
+  }
+
+  .table-container {
+    overflow-x: auto;
+  }
+
+  .table {
+    overflow-x: auto;
+  }
+  .table__cell:nth-child(1) {
+    min-width: 20vw;
+  }
+  .table__cell:nth-child(2) {
+    min-width: 20vw;
+  }
+  .table__cell:nth-child(3) {
+    min-width: 43vw;
+  }
+  .table__cell:nth-child(4) {
+    min-width: 25vw;
+  }
+
+  /* Team Work Card */
+  .card--about:nth-child(1) {
+    background-position-x: 35%;
+  }
+
+  .card--about:nth-child(2) {
+    background-position-x: 35%;
+  }
+
+  .hero__button--home {
+    margin-top: 4rem;
+  }
+
+  .hero--home {
+    text-align: center;
+  }
+
+  .main--home {
+    background-position: right top;
+    background-attachment: fixed;
+    background-size: 130%;
+  }
+
+  .form {
+    grid-template-columns: 75%;
+  }
+
+  .slider__text.h2 {
+    font-size: 2.5rem;
+  }
+
+  .form__group:last-of-type {
+    flex-direction: column-reverse;
+  }
+
+  .form__group:last-of-type .form__button {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 600px) {
+  :root {
+    --content-width: 90vw;
+  }
+
+  .h1 {
+    font-size: 4.5rem;
+  }
+
+  .hero__title--home {
+    width: 95%;
+  }
+
+  .main--home {
+    background-position: center top;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  .cards-container {
+    grid-template-columns: 90%;
+    justify-content: center;
+    justify-items: center;
+    margin-top: 4.5rem;
+  }
+
+  .cards-container--services {
+    grid-template-columns: 100%;
+  }
+
+  .cards-container--about {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    margin-top: 4rem;
+  }
+
+  .card--home {
+    padding: 3rem;
+    max-width: 370px;
+  }
+
+  .card__title {
+    margin-top: 3rem;
+  }
+
+  /* Team Work Card */
+  .card--about:nth-child(1) {
+    grid-row: 1/2;
+    grid-column: 1;
+    background-position-y: 24%;
+  }
+
+  /* Philosophy Card */
+  .card--about:nth-child(2) {
+    grid-row: 2/3;
+    grid-column: 1;
+  }
+
+  /* Office Card */
+  .card--about:nth-child(3) {
+    grid-row: 3/4;
+    grid-column: 1;
+  }
+
+  .table__cell:nth-child(1) {
+    min-width: 15vw;
+  }
+  .table__cell:nth-child(2) {
+    min-width: 15vw;
+  }
+  .table__cell:nth-child(3) {
+    min-width: 70vw;
+  }
+  .table__cell:nth-child(4) {
+    min-width: 45vw;
+  }
+
+  .slider {
+    width: 75%;
+    margin-top: 4rem;
+  }
+
+  .slider__text.h2 {
+    font-size: 1.6rem;
+  }
+
+  .form {
+    grid-template-columns: 90%;
+  }
+
+  .form__group:last-of-type {
+    flex-direction: column-reverse;
+  }
+
+  .form__group:last-of-type .form__button {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
