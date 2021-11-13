@@ -23,6 +23,10 @@
       <!-- Logo -->
       <p class="nav__logo logo">Creatieye</p>
       <!-- Link List -->
+      <input class="input-hamburguer" type="checkbox" id="checkbox-hamburguer" hidden>
+      <label class="label-hamburguer" for="checkbox-hamburguer">
+        <i class="fas fa-bars fa-3x" style="color:white"></i>
+      </label>
       <ul class="nav__list">
         <li class="nav__item">
           <a href="index.html" class="nav__link" id="home">Home</a>
@@ -52,62 +56,64 @@
       <h5 class="hero__slogan--works h5">Things we've made</h5>
     </section>
     <!-- Table -->
-    <table class="table">
-      <tr class="table__row h4">
-        <th class="table__header">Image</th>
-        <th class="table__header">Name</th>
-        <th class="table__header">Description</th>
-        <th class="table__header">Features</th>
-      </tr>
-      <tr class="table__row">
-        <td class="table__cell"><img class="table__image" src="images/smart-watch.jpg" alt="Smart Watch"></td>
-        <td class="table__cell">Smart Watch</td>
-        <td class="table__cell">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit vero, porro tempora minima dolor rem.</td>
-        <td class="table__cell">
-          <ul class="table__list">
-            <li class="table__item">Minimalist</li>
-            <li class="table__item">All suported formats</li>
-            <li class="table__item">Easy integration</li>
-          </ul>
-        </td>
-      </tr>
-      <tr class="table__row">
-        <td class="table__cell"><img class="table__image" src="images/headphones.jpg" alt="Headphones"></td>
-        <td class="table__cell">Headphones</td>
-        <td class="table__cell">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit vero, porro tempora minima dolor rem.</td>
-        <td class="table__cell">
-          <ul class="table__list">
-            <li class="table__item">Minimalist</li>
-            <li class="table__item">All suported formats</li>
-            <li class="table__item">Easy integration</li>
-          </ul>
-        </td>
-      </tr>
-      <tr class="table__row">
-        <td class="table__cell"><img class="table__image" src="images/laptop.jpg" alt="Laptop"></td>
-        <td class="table__cell">Laptop</td>
-        <td class="table__cell">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit vero, porro tempora minima dolor rem.</td>
-        <td class="table__cell">
-          <ul class="table__list">
-            <li class="table__item">Minimalist</li>
-            <li class="table__item">All suported formats</li>
-            <li class="table__item">Easy integration</li>
-          </ul>
-        </td>
-      </tr>
-      <tr class="table__row">
-        <td class="table__cell"><img class="table__image" src="images/smartphone.jpg" alt="Smartphone"></td>
-        <td class="table__cell">Smartphone</td>
-        <td class="table__cell">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit vero, porro tempora minima dolor rem.</td>
-        <td class="table__cell">
-          <ul class="table__list">
-            <li class="table__item">Minimalist</li>
-            <li class="table__item">All suported formats</li>
-            <li class="table__item">Easy integration</li>
-          </ul>
-        </td>
-      </tr>
-    </table>
+    <section class="table-container">
+      <table class="table">
+        <tr class="table__row h4">
+          <th class="table__header">Image</th>
+          <th class="table__header">Name</th>
+          <th class="table__header">Description</th>
+          <th class="table__header">Features</th>
+        </tr>
+        <tr class="table__row">
+          <td class="table__cell"><img class="table__image" src="images/smart-watch.jpg" alt="Smart Watch"></td>
+          <td class="table__cell">Smart Watch</td>
+          <td class="table__cell">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit vero, porro tempora minima dolor rem.</td>
+          <td class="table__cell">
+            <ul class="table__list">
+              <li class="table__item">Minimalist</li>
+              <li class="table__item">All suported formats</li>
+              <li class="table__item">Easy integration</li>
+            </ul>
+          </td>
+        </tr>
+        <tr class="table__row">
+          <td class="table__cell"><img class="table__image" src="images/headphones.jpg" alt="Headphones"></td>
+          <td class="table__cell">Headphones</td>
+          <td class="table__cell">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit vero, porro tempora minima dolor rem.</td>
+          <td class="table__cell">
+            <ul class="table__list">
+              <li class="table__item">Minimalist</li>
+              <li class="table__item">All suported formats</li>
+              <li class="table__item">Easy integration</li>
+            </ul>
+          </td>
+        </tr>
+        <tr class="table__row">
+          <td class="table__cell"><img class="table__image" src="images/laptop.jpg" alt="Laptop"></td>
+          <td class="table__cell">Laptop</td>
+          <td class="table__cell">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit vero, porro tempora minima dolor rem.</td>
+          <td class="table__cell">
+            <ul class="table__list">
+              <li class="table__item">Minimalist</li>
+              <li class="table__item">All suported formats</li>
+              <li class="table__item">Easy integration</li>
+            </ul>
+          </td>
+        </tr>
+        <tr class="table__row">
+          <td class="table__cell"><img class="table__image" src="images/smartphone.jpg" alt="Smartphone"></td>
+          <td class="table__cell">Smartphone</td>
+          <td class="table__cell">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit vero, porro tempora minima dolor rem.</td>
+          <td class="table__cell">
+            <ul class="table__list">
+              <li class="table__item">Minimalist</li>
+              <li class="table__item">All suported formats</li>
+              <li class="table__item">Easy integration</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </section>
   </main>
   <!-- Footer -->
   <footer class="footer content-width">
@@ -117,50 +123,49 @@
       <h5 class="footer__slogan h5 bottom-line">We are more than a digital agency</h5>
     </section>
     <!-- Contact list -->
-    <section class="footer__lists">
-      <section class="contact-section">
-        <h6 class="footer__subtitle h6">Contact us</h6>      
-        <ul class="footer__list">
-          <li class="footer__item">
-            <img src="" alt="" class="footer__icon">
-            <p class="footer__link">(+52) 3121231933</p>
-          </li>
-          <li class="footer__item">
-            <img src="" alt="" class="footer__icon">
-            <p class="footer__link">name@gmail.com</p>
-          </li>
-          <li class="footer__item">
-            <img src="" alt="" class="footer__icon">
-            <p class="footer__link">CDMX, Mexico</p>
-          </li>
-          <li class="footer__item">
-            <img src="" alt="" class="footer__icon">
-            <p class="footer__link">Sunday to Friday</p>
-          </li>
-        </ul>
-      </section>
-      <!-- Services list -->
-      <section class="services-section">
-        <h6 class="footer__subtitle h6">Our services</h6>  
-        <ul class="footer__list">
-          <li class="footer__item">Single Project</li>
-          <li class="footer__item">Design System</li>
-          <li class="footer__item">UI & UX</li>
-          <li class="footer__item">Prototypes</li>
-        </ul>
-      </section>
-      <!-- About list -->
-      <section class="about-section">
-        <h6 class="footer__subtitle h6">About us</h6>
-        <ul class="footer__list">
-          <li class="footer__item">About</li>
-          <li class="footer__item">Blog</li>
-          <li class="footer__item">Contact us</li>
-          <li class="footer__item">Social Media</li>
-        </ul>
-      </section>
+    <section class="contact-section">
+      <h6 class="footer__subtitle h6">Contact us</h6>      
+      <ul class="footer__list">
+        <li class="footer__item">
+          <img src="" alt="" class="footer__icon">
+          <p class="footer__link">(+52) 3121231933</p>
+        </li>
+        <li class="footer__item">
+          <img src="" alt="" class="footer__icon">
+          <p class="footer__link">contact@creatieye.com</p>
+        </li>
+        <li class="footer__item">
+          <img src="" alt="" class="footer__icon">
+          <p class="footer__link">CDMX, Mexico</p>
+        </li>
+        <li class="footer__item">
+          <img src="" alt="" class="footer__icon">
+          <p class="footer__link">Sunday to Friday</p>
+        </li>
+      </ul>
+    </section>
+    <!-- Services list -->
+    <section class="services-section">
+      <h6 class="footer__subtitle h6">Our services</h6>  
+      <ul class="footer__list">
+        <li class="footer__item">Single Project</li>
+        <li class="footer__item">Design System</li>
+        <li class="footer__item">UI & UX</li>
+        <li class="footer__item">Prototypes</li>
+      </ul>
+    </section>
+    <!-- About list -->
+    <section class="about-section">
+      <h6 class="footer__subtitle h6">About us</h6>
+      <ul class="footer__list">
+        <li class="footer__item">About</li>
+        <li class="footer__item">Blog</li>
+        <li class="footer__item">Contact us</li>
+        <li class="footer__item">Social Media</li>
+      </ul>
     </section>
   </footer>
   <script src="js/main.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
 </body>
 </html>
